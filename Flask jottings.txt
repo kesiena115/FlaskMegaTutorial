@@ -1,0 +1,5 @@
+g vs session
+---------------
+The g global is setup by Flask as a place to store and share data during the life of a request.
+
+We've seen that the flask.g object stores and shares data though the life of a request. The flask.session provides a much more complex service along those lines. Once data is stored in the session object it will be available during that request and any future requests made by the same client. Data remains in the session until explicitly removed. To be able to do this, Flask keeps a different session container for each client of our application.
