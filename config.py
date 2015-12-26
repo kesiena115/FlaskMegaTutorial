@@ -15,14 +15,40 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 
-# mail server settings
-MAIL_SERVER = 'localhost'
-MAIL_PORT = 25
-MAIL_USERNAME = None
-MAIL_PASSWORD = None
+# ------- Local mail server -------
+# # mail server settings
+# MAIL_SERVER = 'localhost'
+# MAIL_PORT = 25
+# MAIL_USERNAME = None
+# MAIL_PASSWORD = None
 
+# # administrator list
+# ADMINS = ['kesiena115@gmail.com']
+# ------- End of local mail server -------
+
+# ------- Gmail mail server -------
+# email server
+# MAIL_SERVER = 'smtp.googlemail.com'
+# MAIL_PORT = 465
+# MAIL_USE_TLS = False
+# MAIL_USE_SSL = True
+# MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+# MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+# # administrator list
+# ADMINS = ['kesiena11519@gmail.com']
+# ------- End of Gmail mail server -------
+
+# ------- Yahoo mail server -------
+# email server
+MAIL_SERVER = 'smtp.mail.yahoo.com'
+MAIL_PORT = 465
+MAIL_USE_TLS = False
+MAIL_USE_SSL = True
+MAIL_USERNAME = 'kesiena115@yahoo.com'
+MAIL_PASSWORD = 'Password1.'
 # administrator list
-ADMINS = ['kesiena115@gmail.com']
+ADMINS = ['kesiena115@yahoo.com']
+# ------- End of Yahoo mail server -------
 
 # pagination
 POSTS_PER_PAGE = 3
